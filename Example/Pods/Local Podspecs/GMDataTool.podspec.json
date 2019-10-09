@@ -1,9 +1,9 @@
 {
   "name": "GMDataTool",
   "version": "0.1.0",
-  "summary": "A short description of GMDataTool.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/ioszhanghui@163.com/GMDataTool",
+  "summary": "数据存储  UserDefaults 归档",
+  "description": "UserDefaults存储 归档 别的还有待于 更新",
+  "homepage": "https://github.com/ioszhanghui/GMDataTool.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,12 +12,13 @@
     "ioszhanghui@163.com": "yomingyo@gmail.com"
   },
   "source": {
-    "git": "https://github.com/ioszhanghui@163.com/GMDataTool.git",
+    "git": "https://github.com/ioszhanghui/GMDataTool.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
+  "requires_arc": true,
   "source_files": "GMDataTool/Classes/**/*",
   "dependencies": {
     "MJExtension": [
