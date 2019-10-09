@@ -32,6 +32,14 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'GMDataTool/Classes/**/*'
   
+  s.dependency 'MJExtension'
+  s.dependency 'GMSandboxTool'
+  
+  
+  s.prefix_header_contents = '#import<GMSandboxTool/GMFileUtil.h>','#import<MJExtension/MJExtension.h>'
+
+  
+  
   # s.resource_bundles = {
   #   'GMDataTool' => ['GMDataTool/Assets/*.png']
   # }

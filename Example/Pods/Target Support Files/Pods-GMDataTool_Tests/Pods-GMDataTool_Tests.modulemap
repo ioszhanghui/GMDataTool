@@ -1,0 +1,6 @@
+module Pods_GMDataTool_Tests {
+  umbrella header "Pods-GMDataTool_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

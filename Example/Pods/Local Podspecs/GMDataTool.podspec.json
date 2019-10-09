@@ -1,0 +1,34 @@
+{
+  "name": "GMDataTool",
+  "version": "0.1.0",
+  "summary": "A short description of GMDataTool.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ioszhanghui@163.com/GMDataTool",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ioszhanghui@163.com": "yomingyo@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/ioszhanghui@163.com/GMDataTool.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "GMDataTool/Classes/**/*",
+  "dependencies": {
+    "MJExtension": [
+
+    ],
+    "GMSandboxTool": [
+
+    ]
+  },
+  "prefix_header_contents": [
+    "#import<GMSandboxTool/GMFileUtil.h>",
+    "#import<MJExtension/MJExtension.h>"
+  ]
+}
