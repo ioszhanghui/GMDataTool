@@ -50,7 +50,7 @@
     [defalut synchronize];
 }
 //获取对应的value值
--(NSInteger)getUserDefaultsIntegerValueForKey:(NSString*)key{
++(NSInteger)getUserDefaultsIntegerValueForKey:(NSString*)key{
     if (!key) {
         return 0;
     }

@@ -12,3 +12,4 @@
 
 #import<GMSandboxTool/GMFileUtil.h>
 #import<MJExtension/MJExtension.h>
+#import<GMPhoneInfo/GMPhoneInfo_Header.h>

@@ -11,6 +11,7 @@
 #import "GMKeyedArchiverTool.h"
 #import "GMUserDefaultsTool.h"
 #import "NSObject+CategoryMethod.h"
-
+#import "GMKeyChainTool.h"
+#import "GMSAMKeyChainTool.h"
 
 #endif /* GM_DataHeader_h */

@@ -11,6 +11,14 @@
 
 #import "GMKeyedArchiverTool.h"
 
+#import "GM_DataHeader.h"
+
+#import "SVProgressHUD.h"
+
+#import "GMPhoneInfo_Header.h"
+
+
+
 @interface Animal : NSObject
 
 @property(nonatomic,copy)NSString * name;
@@ -46,6 +54,7 @@
 
 
 -(void)run{
+    [super run];
     NSLog(@"狗跑起来");
 }
 -(void)bark{
@@ -72,27 +81,49 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    [[self class]testDemo2];
-//    [[self class]testDemo1];
-//    [self test1];
-//    [self test2];
+    [[self class]testDemo2];
+    [[self class]testDemo1];
+    [self test1];
+    [self test2];
+
+    Dog * dog = [Dog new];
+    [dog run];
+    [dog bark];
+    
+    Animal * animal = [Animal new];
+    [animal run];
+
+//    [ SVProgressHUD showWithStatus:@"测试"];
+    
+//    [GMKeyChainTool resetKeyChainData];
+    
+    [GMKeyChainTool  saveAccountInfo:@"99999"];
+    [GMKeyChainTool savePasswordInfo:@"123456"];
+    
+    NSLog(@"%@",[GMKeyChainTool accountInfo]);
+    NSLog(@"%@",[GMKeyChainTool passwordInfo]);
+    
+    NSLog(@"%@",[UIDevice currentDevice].IDFA);
+    
+    [GMSAMKeyChainTool saveContent:@"-00000" forKey:@"aaaaaa"];
+    
+//    [GMSAMKeyChainTool deleteContentforKey:@"aaaaaa"];
+//    [GMSAMKeyChainTool clearAllContent];
+    NSLog(@"%@",[GMSAMKeyChainTool getContentforKey:@"aaaaaa"]);
+    NSLog(@"%@",[GMSAMKeyChainTool SAMKeyChainList]);
+
+//    NSDictionary * json = @{
+//                            @"name":@"xxx",
+//                            @"age":@(20),
+//                            @"maxValue":[NSNumber numberWithInteger:10],
+//                            @"info":@{@"index":@"0"}
+//                            };
 //
-//    Dog * dog = [Dog new];
-//    [dog run];
-//    [dog bark];
-    
-    NSDictionary * json = @{
-                            @"name":@"xxx",
-                            @"age":@(20),
-                            @"maxValue":[NSNumber numberWithInteger:10],
-                            @"info":@{@"index":@"0"}
-                            };
-    
-    [GMKeyedArchiverTool setKeyedArchiverUserDefinedValue:json Obj:[Animal class]];
-    
-    Animal * animal = [GMKeyedArchiverTool getKeyArchiveUserDefinedValueFor:[Animal class]];
-    NSLog(@"%@",animal.name);
-    NSLog(@"%@",[animal valueForKey:@"name"]);
+//    [GMKeyedArchiverTool setKeyedArchiverUserDefinedValue:json Obj:[Animal class]];
+//
+//    Animal * animal = [GMKeyedArchiverTool getKeyArchiveUserDefinedValueFor:[Animal class]];
+//    NSLog(@"%@",animal.name);
+//    NSLog(@"%@",[animal valueForKey:@"name"]);
     
 }
 

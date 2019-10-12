@@ -7,11 +7,19 @@
 //
 
 #import "GMAppDelegate.h"
+#import "GMKeyChainTool.h"
+
+#import "SVProgressHUD.h"
+
 
 @implementation GMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [GMKeyChainTool configKeyChainGroupID:@"keyChainInfo"];
+    [SVProgressHUD setDefaultStyle:(SVProgressHUDStyleDark)];
+    
     // Override point for customization after application launch.
     return YES;
 }

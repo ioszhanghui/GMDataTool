@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1313C7C5235172B000CFF97A /* GMDataTool_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GMDataTool_Example.entitlements; sourceTree = "<group>"; };
 		139D2F71AA31A16E96F4FB71 /* GMDataTool.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GMDataTool.podspec; path = ../GMDataTool.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1A9DF4CB83D1E32F6813D9E4 /* libPods-GMDataTool_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GMDataTool_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26ACA8D0B0EAE9B863C2FD36 /* Pods-GMDataTool_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMDataTool_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GMDataTool_Example/Pods-GMDataTool_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				1313C7C5235172B000CFF97A /* GMDataTool_Example.entitlements */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for GMDataTool */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -207,6 +209,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
+				5CE6EFF36E031428D9B5FFD6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,6 +251,11 @@
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
 						DevelopmentTeam = 8LSS8PHWW5;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -312,6 +320,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CE6EFF36E031428D9B5FFD6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GMDataTool_Example/Pods-GMDataTool_Example-resources.sh",
+				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GMDataTool_Example/Pods-GMDataTool_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		88A8AAF1A5FBD5693795FBB3 /* [CP] Check Pods Manifest.lock */ = {
@@ -469,13 +495,14 @@
 			baseConfigurationReference = 26ACA8D0B0EAE9B863C2FD36 /* Pods-GMDataTool_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GMDataTool_Example.entitlements;
 				DEVELOPMENT_TEAM = 8LSS8PHWW5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GMDataTool/GMDataTool-Prefix.pch";
 				INFOPLIST_FILE = "GMDataTool/GMDataTool-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zh.keychain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
@@ -487,13 +514,14 @@
 			baseConfigurationReference = 9A925B8AB5590752494613BF /* Pods-GMDataTool_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GMDataTool_Example.entitlements;
 				DEVELOPMENT_TEAM = 8LSS8PHWW5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GMDataTool/GMDataTool-Prefix.pch";
 				INFOPLIST_FILE = "GMDataTool/GMDataTool-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zh.keychain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;

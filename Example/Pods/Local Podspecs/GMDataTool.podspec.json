@@ -1,8 +1,8 @@
 {
   "name": "GMDataTool",
   "version": "0.1.0",
-  "summary": "数据存储  UserDefaults 归档",
-  "description": "UserDefaults存储 归档 别的还有待于 更新",
+  "summary": "数据存储  UserDefaults 归档  钥匙串存储",
+  "description": "UserDefaults存储 归档 钥匙串存储 别的还有待于 更新",
   "homepage": "https://github.com/ioszhanghui/GMDataTool.git",
   "license": {
     "type": "MIT",
@@ -26,10 +26,20 @@
     ],
     "GMSandboxTool": [
 
+    ],
+    "GMThirdLibrary/GMkeyChain": [
+
+    ],
+    "SAMKeychain": [
+
+    ],
+    "GMPhoneInfo": [
+
     ]
   },
   "prefix_header_contents": [
     "#import<GMSandboxTool/GMFileUtil.h>",
-    "#import<MJExtension/MJExtension.h>"
+    "#import<MJExtension/MJExtension.h>",
+    "#import<GMPhoneInfo/GMPhoneInfo_Header.h>"
   ]
 }

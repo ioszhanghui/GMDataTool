@@ -72,15 +72,24 @@
     IMP originIMP = method_getImplementation(originMethod);
     //替换方法
     IMP swizzleIMP = method_getImplementation(swiizzleMethod);
-
     //添加方法成功 可以判断子类 是否实现该方法
     BOOL add = class_addMethod([self class], originSel,swizzleIMP, method_getTypeEncoding(swiizzleMethod));
-    
+        
     if (add) {
         class_replaceMethod([self class], swizzleSel, originIMP, method_getTypeEncoding(originMethod));
     }else{
         //如果替换方法 也存在 直接交换 实现
         method_exchangeImplementations(originMethod, swiizzleMethod);
+    }
+}
+
++(void)nslogMethod:(Class)objClass{
+    unsigned int count;
+    Method * methodList = class_copyMethodList(objClass, &count);
+    for (int i=0; i<count; i++) {
+        Method method = methodList[i];
+      SEL sel =  method_getName(method);
+        NSLog(@"%@",NSStringFromSelector(sel));
     }
 }
 

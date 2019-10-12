@@ -5,10 +5,20 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - GMDataTool (0.1.0):
+    - GMPhoneInfo
     - GMSandboxTool
+    - GMThirdLibrary/GMkeyChain
     - MJExtension
+    - SAMKeychain
+  - GMPhoneInfo (0.1.0):
+    - GMPhoneInfo/AppInfo (= 0.1.0)
+    - GMPhoneInfo/DeviceInfo (= 0.1.0)
+  - GMPhoneInfo/AppInfo (0.1.0)
+  - GMPhoneInfo/DeviceInfo (0.1.0)
   - GMSandboxTool (0.1.0)
+  - GMThirdLibrary/GMkeyChain (0.1.0)
   - MJExtension (3.0.17)
+  - SAMKeychain (1.5.3)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -18,8 +28,11 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - FBSnapshotTestCase
     - MJExtension
+    - SAMKeychain
   https://github.com/ioszhanghui/GMPublicRepo.git:
+    - GMPhoneInfo
     - GMSandboxTool
+    - GMThirdLibrary
 
 EXTERNAL SOURCES:
   GMDataTool:
@@ -27,9 +40,12 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  GMDataTool: 59eee4429083c1babcd443dd16ca9499b4f9b0c5
+  GMDataTool: 92ffe304f1e3af32028f4f9464d19e0a22c565c2
+  GMPhoneInfo: 34ca7cef041bc84d054b7aef47681b91bddeeb28
   GMSandboxTool: 22079f31fe09c23b9bd66c0cf2e3f03ed5db1e28
+  GMThirdLibrary: 3665fa5956d34d73fe6f99fbeb4ba41b9fb3f713
   MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
 
 PODFILE CHECKSUM: e073bef4822c87f40f684193d31a4f93dd8b5829
 

@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GMDataTool'
-  s.version          = '0.1.0'
-  s.summary          = '数据存储  UserDefaults 归档'
+  s.version          = '0.2.0'
+  s.summary          = '数据存储  UserDefaults 归档  钥匙串存储'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-UserDefaults存储 归档 别的还有待于 更新
+UserDefaults存储 归档 钥匙串存储 别的还有待于 更新
                        DESC
 
   s.homepage         = 'https://github.com/ioszhanghui/GMDataTool.git'
@@ -35,8 +35,11 @@ UserDefaults存储 归档 别的还有待于 更新
   
   s.dependency 'MJExtension'
   s.dependency 'GMSandboxTool'
+  s.dependency 'GMThirdLibrary/GMkeyChain'
+  s.dependency 'SAMKeychain'
+  s.dependency 'GMPhoneInfo'
   
-  s.prefix_header_contents = '#import<GMSandboxTool/GMFileUtil.h>','#import<MJExtension/MJExtension.h>'
+  s.prefix_header_contents = '#import<GMSandboxTool/GMFileUtil.h>','#import<MJExtension/MJExtension.h>','#import<GMPhoneInfo/GMPhoneInfo_Header.h>'
 
   
   
