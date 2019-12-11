@@ -20,14 +20,6 @@
 
 @implementation GMKeyChainTool
 
-/*如果支持  钥匙串 APP信息  共享 在启动配置 keychaingroup标识
- *
- *
- */
-+(void)configKeyChainGroupID:(NSString*)groupID{
-    [GMKeyChainTool keyChainTool].keyChainGroup = groupID;
-}
-
 -(instancetype)init{
     if (self=[super init]) {
         

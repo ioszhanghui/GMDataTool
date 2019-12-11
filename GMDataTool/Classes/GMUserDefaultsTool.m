@@ -34,7 +34,7 @@
     [defalut synchronize];
 }
 //获取对应的value值
--(BOOL)getUserDefaultsBoolValueForKey:(NSString*)key{
++(BOOL)getUserDefaultsBoolValueForKey:(NSString*)key{
     if (!key) {
         return NO;
     }

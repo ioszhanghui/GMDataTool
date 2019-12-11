@@ -2,6 +2,7 @@
 
 source 'https://github.com/ioszhanghui/GMPublicRepo.git'
 source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://github.com/ioszhanghui/GMPublicRepoStaticLibrary.git'
 
 platform :ios, '9.0'
 

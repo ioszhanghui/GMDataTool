@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+
 /*操作结果回调*/
 typedef void(^GMActionResult)(BOOL result);
 

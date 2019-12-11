@@ -32,12 +32,12 @@ UserDefaults存储 归档 钥匙串存储 别的还有待于 更新
   s.requires_arc = true
 
   s.source_files = 'GMDataTool/Classes/**/*'
-  
   s.dependency 'MJExtension'
-  s.dependency 'GMSandboxTool'
   s.dependency 'GMThirdLibrary/GMkeyChain'
   s.dependency 'SAMKeychain'
   s.dependency 'GMPhoneInfo'
+  s.dependency 'GMSandboxTool'
+
   
   s.prefix_header_contents = '#import<GMSandboxTool/GMFileUtil.h>','#import<MJExtension/MJExtension.h>','#import<GMPhoneInfo/GMPhoneInfo_Header.h>'
 

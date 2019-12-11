@@ -1,1 +1,1 @@
-../../../GMPhoneInfo/GMPhoneInfo/Classes/AppInfo/GMAppInfoTool.h
+../../../GMPhoneInfo/GMPhoneInfo/Classes/BaseCode/AppInfo/GMAppInfoTool.h

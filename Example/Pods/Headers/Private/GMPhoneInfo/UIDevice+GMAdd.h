@@ -1,1 +1,1 @@
-../../../GMPhoneInfo/GMPhoneInfo/Classes/DeviceInfo/UIDevice+GMAdd.h
+../../../GMPhoneInfo/GMPhoneInfo/Classes/BaseCode/DeviceInfo/UIDevice+GMAdd.h

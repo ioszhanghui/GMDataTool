@@ -10,12 +10,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GMKeyChainTool : NSObject
-/*如果支持  钥匙串 APP信息  共享 在启动配置 keychaingroup标识
- *
- *
- */
-+(void)configKeyChainGroupID:(NSString*)groupID;
-
 /*保存数据
  * (id)kSecAttrAccount  保存账号
  * (id)kSecValueData    保存密码

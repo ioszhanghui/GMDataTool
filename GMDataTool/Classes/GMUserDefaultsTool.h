@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 //保存bool类型
 +(void)setUserDefaultsBoolValue:(BOOL)value forKey:(NSString*)key;
 //获取对应的value值
--(BOOL)getUserDefaultsBoolValueForKey:(NSString*)key;
++(BOOL)getUserDefaultsBoolValueForKey:(NSString*)key;
 
 //保存基本数据类型
 +(void)setUserDefaultIntegerValue:(NSInteger)value forKey:(NSString*)key;
